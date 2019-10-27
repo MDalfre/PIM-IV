@@ -6,14 +6,32 @@
 
 int main(int argc, char *argv[]) {
 	printf("Unip - PIM IV\n");
-	//char NomedaSessao[100] = "";
-	//printf("Digite o nome da Sessao: ");
-	//scanf("%[^\n]s", NomedaSessao);
-	//setbuf(stdin, NULL);
-	//printf("Nome da Sessao: %s \n", NomedaSessao);
-	//scanf("%i", coluna);
-	//teste [linha][coluna] = 12;
-	//printf("%s", teste[linha][coluna]);
-	LugaresDisponiveis();
+	
+	char Poltrona[10][10] = {
+		{'1','2','3','4','5','6','7','8','9','0'},
+		{'1','2','3','4','5','6','7','8','9','0'},
+		{'1','2','3','4','5','6','7','8','9','0'},
+		{'1','2','3','4','5','6','7','8','9','0'},
+		{'1','2','3','4','5','6','7','8','9','0'},
+		{'1','2','3','4','5','6','7','8','9','0'},
+		{'1','2','3','4','5','6','7','8','9','0'},
+		{'1','2','3','4','5','6','7','8','9','0'},
+		{'1','2','3','4','5','6','7','8','9','0'},
+		{'1','2','3','4','5','6','7','8','9','0'}
+	};
+	
+	LugaresDisponiveis(Poltrona);
+	
+	int fila, poltrona;
+	
+	printf("Digite a fila: ");
+	scanf("%i", &fila);
+	printf("\n");
+	printf("Digite a Poltrona: ");
+	scanf("%i", &poltrona);
+	Poltrona[fila-1][poltrona-1] = 'X';
+	printf("clear");
+	
+	LugaresDisponiveis(Poltrona);
 	return 0;
 }
