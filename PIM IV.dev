@@ -60,8 +60,18 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
+[Unit3]
+FileName=LugaresDisponiveis.h
+CompileCpp=0
+Folder=Services
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
 [Unit2]
-FileName=Services\PoltronaCount.h
+FileName=LugaresDisponiveis.h
 CompileCpp=0
 Folder=Services
 Compile=1

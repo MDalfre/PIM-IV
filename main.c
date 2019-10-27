@@ -11,12 +11,9 @@ int main(int argc, char *argv[]) {
 	//scanf("%[^\n]s", NomedaSessao);
 	//setbuf(stdin, NULL);
 	//printf("Nome da Sessao: %s \n", NomedaSessao);
-	int teste[0][10] = {0,1,2,3,4,5,6,7,8,9} ;
-	int linha = 0;
-	int coluna = 3;
 	//scanf("%i", coluna);
 	//teste [linha][coluna] = 12;
 	//printf("%s", teste[linha][coluna]);
-	LugaresDisponiveis(teste);
+	LugaresDisponiveis();
 	return 0;
 }
