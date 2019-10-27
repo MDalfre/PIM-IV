@@ -2,27 +2,23 @@
 #include <stdlib.h>
 //Importando as funções descritas em /Services
 #include "LugaresDisponiveis.h"
+#include "Ingressos.h"
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
 	printf("Unip - PIM IV\n");
 	
-	char Poltrona[10][10] = {
-		{'1','2','3','4','5','6','7','8','9','0'},
-		{'1','2','3','4','5','6','7','8','9','0'},
-		{'1','2','3','4','5','6','7','8','9','0'},
-		{'1','2','3','4','5','6','7','8','9','0'},
-		{'1','2','3','4','5','6','7','8','9','0'},
-		{'1','2','3','4','5','6','7','8','9','0'},
-		{'1','2','3','4','5','6','7','8','9','0'},
-		{'1','2','3','4','5','6','7','8','9','0'},
-		{'1','2','3','4','5','6','7','8','9','0'},
-		{'1','2','3','4','5','6','7','8','9','0'}
-	};
+	char Poltrona[10][10] = {""};
+	double ValorEntrada = 10.0;
+	int fila, poltrona;
+	
+	
+	
+	
 	
 	LugaresDisponiveis(Poltrona);
 	
-	int fila, poltrona;
+	
 	
 	printf("Digite a fila: ");
 	scanf("%i", &fila);
@@ -33,5 +29,6 @@ int main(int argc, char *argv[]) {
 	printf("clear");
 	
 	LugaresDisponiveis(Poltrona);
+	printf ("%.2f",Ingresso(ValorEntrada));
 	return 0;
 }
