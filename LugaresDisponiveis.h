@@ -1,4 +1,4 @@
-int LugaresDisponiveis (char PoltronasDisponiveis[10][10]) {
+void LugaresDisponiveis (char PoltronasDisponiveis[10][10]) {
 
 	
 	printf("Lugares Disponiveis: \n");
@@ -27,7 +27,5 @@ int LugaresDisponiveis (char PoltronasDisponiveis[10][10]) {
 	printf("   ----------------------------------------- \n");
 	
 
-	
-	return 0;
 	
 }
