@@ -4,6 +4,7 @@ void LugaresDisponiveis (char PoltronasDisponiveis[10][10]) {
 	printf("Lugares Disponiveis: \n");
 	printf(" \n");
 	printf("Fila              Poltronas\n");
+	printf("     1   2   3   4   5   6   7   8   9  10\n");
 	printf("   ----------------------------------------- \n");
 	printf("1 -| %c | %c | %c | %c | %c | %c | %c | %c | %c | %c | \n", PoltronasDisponiveis[0][0],PoltronasDisponiveis[0][1],PoltronasDisponiveis[0][2],PoltronasDisponiveis[0][3],PoltronasDisponiveis[0][4],PoltronasDisponiveis[0][5],PoltronasDisponiveis[0][6],PoltronasDisponiveis[0][7],PoltronasDisponiveis[0][8],PoltronasDisponiveis[0][9]);
 	printf("   ----------------------------------------- \n");

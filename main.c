@@ -9,9 +9,10 @@
 
 int main(int argc, char *argv[]) {
 	printf("Unip - PIM IV\n");
-	
+	//Variavies Principais
 	char Poltrona[10][10] = {""};
 	double ValorEntrada = 10.0;
+	double ValorEntradaFinal;
 	int fila, poltrona;
 	int dia, mes, ano, semana;
 	
@@ -23,9 +24,11 @@ int main(int argc, char *argv[]) {
   		ano = tm.tm_year+1900;
   		semana = tm.tm_wday;
   		printf("Data - %d/%d/%d \n", dia,mes,ano );
+  		if(semana == 2){
+  			printf("Hoje e Terca-Feira, dia de desconto !\n");
+		  }
 		
 	}
-
 	
 	void InicioSistema (){
 		printf("Iniciando Sessao ...\n");
@@ -36,24 +39,26 @@ int main(int argc, char *argv[]) {
 		
 	}
 	
-	InicioSistema();
+	void EscolheLugar(){
+		LugaresDisponiveis(Poltrona);
+		printf("Digite a fila: ");
+		scanf("%i", &fila);
+		printf("Digite a Poltrona: ");
+		scanf("%i", &poltrona);
+		Poltrona[fila-1][poltrona-1] = 'X';
+		system("cls");
+		LugaresDisponiveis(Poltrona);
+		
+	}
+	
+	void Orquestrador(){
+		ValorEntradaFinal = Ingresso(ValorEntrada, semana);
+		EscolheLugar();
+		
+		
+		
+	}
 	
 
-	
-	
-	
-	LugaresDisponiveis(Poltrona);
-	
-	
-	
-	printf("Digite a fila: ");
-	scanf("%i", &fila);
-	printf("Digite a Poltrona: ");
-	scanf("%i", &poltrona);
-	Poltrona[fila-1][poltrona-1] = 'X';
-	system("cls");
-	
-	LugaresDisponiveis(Poltrona);
-	printf ("%.2f",Ingresso(ValorEntrada, semana));
 	return 0;
 }
