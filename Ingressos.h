@@ -11,7 +11,7 @@ double Ingresso(double valor, int semana) {
     printf("Digite a idade do cliente: ");
     scanf("%i", & idade);
     printf("\n");
-    if (idade > 18) {
+    if (idade >= 18) {
 		criancaCarenteInt = 2;
 		printf("Cliente e professor da rede publica ? [S - Sim/ N - Nao]: ");
     	scanf("%s", & professor);
@@ -52,13 +52,16 @@ double Ingresso(double valor, int semana) {
   }
 
   if (idade >= 2 && idade <= 12) {
-    valorDesconto = (valor - valor / 2);
+  	if(criancaCarenteInt == 1 && semana == 2){
+  		valorDesconto = 0;
+	  }else{
+		valorDesconto = (valor - valor / 2);  	
+	  }
+    
   } else if (idade >= 60) {
     valorDesconto = (valor - valor / 2);
   } else if (professorInt == 1) {
     valorDesconto = (valor - valor / 2);
-  } else if (criancaCarente == 1 && semana == 2) {
-    valorDesconto = 0;
   } else {
     valorDesconto = valor;
   }
