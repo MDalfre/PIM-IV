@@ -1,7 +1,18 @@
-void LugaresDisponiveis (char PoltronasDisponiveis[10][10]) {
-
+int LugaresDisponiveis (char PoltronasDisponiveis[10][10]) {
 	
-	printf("Lugares Disponiveis: \n");
+	int count = 0;
+	int i,e;
+	
+	
+		for(i=0; i <= 9; i++){
+		for(e=0; e <= 9; e++ ){
+			if(PoltronasDisponiveis[i][e] == 'X'){
+				count++;
+			}
+		}
+	}
+	
+	printf("Lugares Disponiveis: %i \n", 100-count);
 	printf(" \n");
 	printf("Fila              Poltronas\n");
 	printf("     1   2   3   4   5   6   7   8   9  10\n");
@@ -28,5 +39,7 @@ void LugaresDisponiveis (char PoltronasDisponiveis[10][10]) {
 	printf("   ----------------------------------------- \n");
 	
 
+	
+	return count;
 	
 }

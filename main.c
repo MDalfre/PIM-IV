@@ -11,7 +11,7 @@
 int main(int argc, char *argv[]) {
 	printf("Unip - PIM IV\n");
 	//Variavies Principais
-	char Poltrona[10][10] = {""};
+	char Poltrona[10][10] ;
 	double ValorEntrada;
 	double ValorEntradaFinal;
 	int fila, poltrona;
@@ -19,6 +19,13 @@ int main(int argc, char *argv[]) {
 	char NomePeca[37] = "";
 	double ValorTotal = 0;
 	char Start = 's';
+	int i, e;
+	
+	for(i=0; i <= 9; i++){
+		for(e=0; e <= 9; e++ ){
+			Poltrona[i][e] = '.';
+		}
+	}
 	
 	void Calendario(){
 		time_t t = time(NULL);
@@ -58,7 +65,7 @@ int main(int argc, char *argv[]) {
 			printf("Poltrona Indisponivel !");
 			EscolheLugar();
 		}else{
-			Poltrona[fila-1][poltrona-1] = 'X';
+			Poltrona[fila-1][poltrona-1] = 'X' ;
 			LugaresDisponiveis(Poltrona);
 		}
 
