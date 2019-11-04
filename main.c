@@ -1,17 +1,12 @@
 #include <stdio.h>
-
 #include <stdlib.h>
  //Importado para exibição das datas do sistema.
 #include <time.h>
-
 #include <windows.h>
  //Importando as funções descritas em /Services
 #include "LugaresDisponiveis.h"
-
 #include "Ingressos.h"
-
 #include "ImprimeBilhete.h"
-
 #include "Logs.h"
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
