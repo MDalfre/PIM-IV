@@ -24,12 +24,12 @@ HostApplication=
 UseCustomMakefile=0
 CustomMakefile=
 CommandLine=
-Folders=Services
+Folders=Servicos
 IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
 CompilerSettings=0000000000000000001000000
-UnitCount=4
+UnitCount=5
 
 [VersionInfo]
 Major=1
@@ -63,7 +63,7 @@ BuildCmd=
 [Unit3]
 FileName=Ingressos.h
 CompileCpp=0
-Folder=Services
+Folder=Servicos
 Compile=1
 Link=1
 Priority=1000
@@ -73,7 +73,7 @@ BuildCmd=
 [Unit2]
 FileName=LugaresDisponiveis.h
 CompileCpp=0
-Folder=Services
+Folder=Servicos
 Compile=1
 Link=1
 Priority=1000
@@ -83,7 +83,17 @@ BuildCmd=
 [Unit4]
 FileName=ImprimeBilhete.h
 CompileCpp=0
-Folder=Services
+Folder=Servicos
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit5]
+FileName=Logs.h
+CompileCpp=0
+Folder=Servicos
 Compile=1
 Link=1
 Priority=1000
