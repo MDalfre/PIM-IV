@@ -11,6 +11,7 @@ int LugaresDisponiveis(char PoltronasDisponiveis[10][10]) {
             }
         }
     }
+	
     //Imprime tabela de filas/poltronas.
     printf("Lugares Disponiveis: %i \n", 100 - count);
     printf(" \n");
@@ -37,7 +38,7 @@ int LugaresDisponiveis(char PoltronasDisponiveis[10][10]) {
     printf("             ----------------------------------------- \n");
     printf("          10-| %c | %c | %c | %c | %c | %c | %c | %c | %c | %c | \n", PoltronasDisponiveis[9][0], PoltronasDisponiveis[9][1], PoltronasDisponiveis[9][2], PoltronasDisponiveis[9][3], PoltronasDisponiveis[9][4], PoltronasDisponiveis[9][5], PoltronasDisponiveis[9][6], PoltronasDisponiveis[9][7], PoltronasDisponiveis[9][8], PoltronasDisponiveis[9][9]);
     printf("             ----------------------------------------- \n");
-
+    
     return count;
 
 }

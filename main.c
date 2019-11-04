@@ -19,7 +19,7 @@
 //Variavies Principais
 char Poltrona[10][10];
 double ValorEntrada;
-int Lugares = 0;
+int Lugares = 1;
 double ValorEntradaFinal;
 int fila, poltrona;
 int dia, mes, ano, semana;
@@ -66,7 +66,7 @@ void InicioSistema() {
     printf("Iniciando Sessao ...\n");
     Sleep(5000);
     system("cls");
-    printf("------[Teatro Vitoria]------\n");
+    printf("------[Teatro System]------\n");
     Calendario();
     Sleep(1000);
     printf("Digite o nome da peca: ");
@@ -84,9 +84,10 @@ void InicioSistema() {
 
         system("cls");
         system("color 07");
+        //Preenche a matris de poltronas com '.' .
         for (i = 0; i <= 9; i++) {
             for (e = 0; e <= 9; e++) {
-                Poltrona[i][e] = '.';
+                Poltrona[i][e] = 'X';
             }
         }
     }
@@ -124,10 +125,20 @@ void EscolheLugar() {
             EscolheLugar();
         } else {
             Poltrona[fila - 1][poltrona - 1] = 'X';
-            Lugares = LugaresDisponiveis(Poltrona) - 100;
+            Lugares = LugaresDisponiveis(Poltrona);
         }
     }
 
+}
+
+void LogSave() {
+    ValorTotal = ValorTotal + ValorEntradaFinal;
+    logs[Lugares][0] = dia;
+    logs[Lugares][1] = mes;
+    logs[Lugares][2] = ano;
+    logs[Lugares][3] = ValorEntradaFinal;
+    logs[Lugares][4] = fila;
+    logs[Lugares][5] = poltrona;
 }
 
 //Exibe os logs do sistema
@@ -143,15 +154,20 @@ void Orquestrador() {
     system("color 0C");
     printf("Valor do Ingresso: R$%.2f \n", ValorEntrada);
     printf("Valor do Ingresso com desconto: R$%.2f \n", ValorEntradaFinal);
-    EscolheLugar();
+    //Checa se todas as poltronas já foram vendidas.
+    if (Lugares == 100) {
+        system("cls");
+        printf("Todas as poltronas ja foram vendidas !\n");
+        Start = 'N';
+        Sleep(1000);
+        system("cls");
+        ExibirLogs(logs);
+
+    } else {
+        EscolheLugar();
+    }
+    LogSave();
     ImprimeBilhete(ValorEntradaFinal, fila, poltrona, dia, mes, ano, NomePeca);
-    ValorTotal = ValorTotal + ValorEntradaFinal;
-    logs[Lugares + 100][0] = dia;
-    logs[Lugares + 100][1] = mes;
-    logs[Lugares + 100][2] = ano;
-    logs[Lugares + 100][3] = ValorEntradaFinal;
-    logs[Lugares + 100][4] = fila;
-    logs[Lugares + 100][5] = poltrona;
     printf("Deseja realizar outra venda ? [S - Sim] ou qualquer outra tecla para Logs: ");
     scanf("%s", & Start);
     system("cls");
@@ -160,8 +176,11 @@ void Orquestrador() {
 
 int main(int argc, char * argv[]) {
     printf("------[Unip - PIM IV]------\n");
+    printf("\n");
     printf("         [Alunos]          \n");
+    printf("\n");
     printf(" - Marcio Henrique Dalfre RA: 0506960\n");
+    printf("\n");
 
     //Inicio do Loop de vendas.
     InicioSistema();
