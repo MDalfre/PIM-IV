@@ -82,7 +82,7 @@ void InicioSistema() {
         //Preenche a matris de poltronas com '.' .
         for (i = 0; i <= 9; i++) {
             for (e = 0; e <= 9; e++) {
-                Poltrona[i][e] = 'X';
+                Poltrona[i][e] = '.';
             }
         }
     }
@@ -174,7 +174,11 @@ int main(int argc, char * argv[]) {
     printf("\n");
     printf("         [Alunos]          \n");
     printf("\n");
-    printf(" - Marcio Henrique Dalfre RA: 0506960\n");
+    printf(" - Bernardo Soares Nascimento RA:1986546\n");
+	printf(" - Gustavo Alves Rogeri RA:0517350\n");
+	printf(" - Jose Ribamar Laune Rego Junior RA:1984646\n");
+	printf(" - Marcio Henrique Dalfre RA:0506960\n");
+	printf(" - Vicente Hsia RA:0510265\n");
     printf("\n");
 
     //Inicio do Loop de vendas.
