@@ -3,7 +3,7 @@
  //Importado para exibição das datas do sistema.
 #include <time.h>
 #include <windows.h>
- //Importando as funções descritas em /Services
+ //Importando as funções descritas em /Servicos
 #include "LugaresDisponiveis.h"
 #include "Ingressos.h"
 #include "ImprimeBilhete.h"
@@ -26,6 +26,7 @@ double logs[100][6] = {};
 
 //Inicia o calendário do sistema, e checa o dia da semana
 void Calendario() {
+
     //Inicia o calendário.
     time_t t = time(NULL);
     struct tm tm = * localtime( & t);
@@ -170,6 +171,7 @@ void Orquestrador() {
 }
 
 int main(int argc, char * argv[]) {
+	system("title Teatro System -  1.0 ");
     printf("------[Unip - PIM IV]------\n");
     printf("\n");
     printf("         [Alunos]          \n");
